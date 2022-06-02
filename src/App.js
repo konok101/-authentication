@@ -44,14 +44,17 @@ const handleGithubSignIn= ()=>{
    .catch(error =>{
      setUser({});
    })
-
  }
+
+ 
 
  
   return (
     <div className="App">
  {
-   user.email ? <button onClick={handleSingnOutGoogle}>SignOut</button>  :
+   user.uid ? 
+   <button onClick={handleSingnOutGoogle}>SignOut</button>
+    :
  <>
   
     <button onClick={handleGoogleSignIn}>Google sign in</button>
